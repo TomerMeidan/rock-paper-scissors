@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
     </style>
+    <script src="decision.js" defer></script>
 </head>
 <body>
-    <script src="decision.js"></script>
 
     <h1>Rock Paper Scissors</h1>
     <h2>Select one of the following options</h2>
-    <button onclick="playerChoice('Rock')">Rock</button>
-    <button onclick="playerChoice('Paper')">Paper</button>
-    <button onclick="playerChoice('Scissors')">Scissors</button>
+   
+    <div class="buttons">
+        <button id="1">Rock</button>
+        <button id="2">Paper</button>
+        <button id="3">Scissors</button>
+    </div>
 
-    
-    <p id="playerPick"></p>
-    <p id="computerPick"></p>
-    <p id="status"></p>
+    <div class="results">
+        <p id="choices"></p>
+        <p id="status"></p>
+    </div>
 
+    <div class="scores">
+        <p id="computer-score"></p>
+        <p id="player-score"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => init())
+    </script>
 </body>
 </html>
